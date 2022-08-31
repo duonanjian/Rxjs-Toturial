@@ -1,0 +1,9 @@
+{
+  "name": "rxjs",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@types/lodash": "^4.14.184",
+    "rxjs": "^7.5.5"
+  }
+}
