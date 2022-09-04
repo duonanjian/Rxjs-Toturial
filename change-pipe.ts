@@ -36,9 +36,9 @@ export default function () {
   // })();
 
   // mergeMap 就是对数据进行判断，返回新的observable
-  (function rxMap() {
-    dataTime
-      .pipe(mergeMap((x) => (x % 2 === 0 ? of(x) : empty())))
-      .subscribe(console.log);
-  })();
+  // (function rxMap() {
+  //   dataTime
+  //     .pipe(mergeMap((x) => (x % 2 === 0 ? of(x) : empty())))
+  //     .subscribe(console.log);
+  // })();
 }
