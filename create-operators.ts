@@ -16,21 +16,28 @@ export default function () {
 
   // create 写法稍有变化，现在直接是new Observable()
   // (function create() {
-  //   const source = new Observable((observer: any) => {
-  //     observer.next(1);
-  //     observer.next(2);
-  //     setTimeout(() => {
-  //       observer.next(3);
+	// 	const observable = (observaber: any) => {
+	// 		let number = 3;
+	// 		observaber.next(1);
+  //     observaber.next(2);
+  //     const time = setInterval(() => {
+  //       observaber.next(number++);
   //     }, 1000);
-  //   });
+  //     return {
+  //       unsubscribe: () => {
+  //         clearInterval(time);
+  //       },
+  //     };
+  //   }
+  //   const source = new Observable(observable);
   //   // 方式一
   //   source.subscribe({
   //     next(val) {
   //       console.log('A：' + val);
   //     },
-  //   });
+  //   }).unsubscribe();
   //   // 方式二
-  //   source.subscribe((val) => console.log('B：' + val));
+  //   // source.subscribe((val) => console.log('B：' + val));
   // })();
 
   // from 创建器的作用是将数组转换为可观察对象类型的数据流。
